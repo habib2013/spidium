@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class AddPostsScreen extends StatefulWidget {
   @override
@@ -46,14 +47,14 @@ class _AddPostsScreenState extends State<AddPostsScreen> {
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                             colors: [
-                              Colors.blueAccent,
-                              Colors.red[300],
+                              Colors.white12,
+                              Colors.white,
                             ])),
                     child: Text(
                       'Preview',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Josefin Sans',
                       ),
@@ -62,7 +63,7 @@ class _AddPostsScreenState extends State<AddPostsScreen> {
                 ],
               ),
             ),
-            _ourInputsForm("Image & Blog Title", _blogtitle),
+            _ourInputsForm("Backgound Image & Title", _blogtitle),
           ],
         ),
           DraggableScrollableSheet(
@@ -101,6 +102,7 @@ class _AddPostsScreenState extends State<AddPostsScreen> {
         controller: ourController,
         validator: (value) {},
         decoration: InputDecoration(
+          prefixIcon: Icon(FeatherIcons.image),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20)),
               borderSide: BorderSide(
